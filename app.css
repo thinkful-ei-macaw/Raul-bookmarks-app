@@ -2,11 +2,5 @@
   box-sizing: border-box;
 }
 
-body {
-  background: rgb(104, 104, 153);
-}
 
-.title {
-  display: flex;
-  text-align: center;
-}
+
