@@ -45,6 +45,24 @@ header {
   padding: 2rem;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 5%;
+  opacity: 95%;
+  color: black;
+  width: 420px;
+  height: 200px;
+}
+
+
+
+
 /* anything footer related */
 
 .footer {

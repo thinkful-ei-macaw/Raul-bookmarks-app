@@ -13,21 +13,28 @@
 </head>
 
 <body>
-  <form>
-    <header>
-      <section id="title">
-        <h1>Bookmarks App</h1>
-      </section>
 
-      <button class="newBookmark js-addNewButton">+ New 📘</button>
-      <button class="filterButton js-filterByButton">Filtered By 🚩 </button>
+  <header>
+    <section id="title">
+      <h1>My Bookmarks</h1>
+  </header>
+  <main aria-live="polite">
 
-      <section id="js-results"></section>
+    <div class="js-buttons">
+      <input class="createNewBookmark" type="button" value="+ New Bookmark 📘">
+      <input class="filterBy" type="button" value="Filtered By 🚩">
+    </div>
 
 
-    </header>
-  </form>
-  <main aria-live="polite"></main>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2020 bookmarker, Raul G.</p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="store.js"></script>
+    <script src="bookmarks.js"></script>
 </body>
 
 </html>
