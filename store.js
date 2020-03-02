@@ -24,3 +24,7 @@ const store = {
   error: null,
   filter: 0
 };
+
+export default {
+  store
+}
