@@ -17,6 +17,8 @@ const render = () => {
 
 };
 
+
+
 const bindEventListeners = () => {
 
 };

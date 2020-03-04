@@ -1,6 +1,6 @@
 
 
-const store = {
+const books = {
   bookmarks: [
     {
       id: 'x56w',
@@ -25,6 +25,7 @@ const store = {
   filter: 0
 };
 
-export default {
-  store
-}
+const findById = function (id) {
+  return this.store.find
+    (currentItem => currentItem.id === id);
+};
