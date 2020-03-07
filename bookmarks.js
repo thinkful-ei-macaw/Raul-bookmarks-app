@@ -1,6 +1,6 @@
 // [] render function 
-// [] init 
-// [] import store
+// [x] init 
+// [x] import store
 // [] register event listeners
 // [] function add handlers
 import $ from 'jquery';
