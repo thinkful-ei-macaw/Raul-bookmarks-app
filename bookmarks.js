@@ -5,7 +5,6 @@
 // [] function add handlers
 import $ from 'jquery';
 import api from './api';
-
 import store from './store';
 
 const init = () => {
@@ -19,9 +18,27 @@ const render = () => {
 
 
 
+/////////////////////////////////
+///      EVENT LISTENERS      ///      
+/////////////////////////////////
+
 const bindEventListeners = () => {
 
 };
+
+
+///////////////////////////////
+///  GENERATOR FUNCTIONS   ///
+/////////////////////////////
+
+
+function generateButtons() {
+
+};
+
+
+
+
 
 
 
