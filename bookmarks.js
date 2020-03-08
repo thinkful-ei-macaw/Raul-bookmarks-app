@@ -1,11 +1,10 @@
-// [] render function 
+// [x] render function 
 // [x] init 
 // [x] import store
-// [] register event listeners
+// [x] register event listeners
 // [] function add handlers
 import $ from 'jquery';
 import api from './api.js';
-import './app.css';
 import store from './store.js';
 
 
@@ -14,14 +13,28 @@ const init = () => {
   bindEventListeners();
 };
 
-const render = function () {
+///////// render function ///////////
+function render() {
+  generateAddButtons();
 
-};
+}
+
+/// handlers ////
 
 
-const bindEventListeners = () => {
 
-};
+////event listeners ///////////
+function bindEventListeners() {
 
+}
+
+///// template generation //////
+function generateAddButtons() {
+  return `
+  <div class="js-buttons">
+      <input class="createNewBookmark" type="button" value="+ New Bookmark 📘">
+      <input class="filterBy" type="button" value="Filtered By 🚩">
+    </div>`;
+}
 
 $(init);

@@ -15,7 +15,6 @@ body {
   font-size: 18px;
 }
 
-
 input{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: lighter;
@@ -25,50 +24,8 @@ input{
   color: black;
 }
 
-.hidden {
-  display: none;
-}
 
 
-.bookmark {
-  display: block;
-  color: grey;
-  font-style: italic;
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-.bookmark > li {
-   margin-bottom: 20px;
-  border: 1px solid grey;
-  padding: 20px;
-}
-
-.bookmark-book {
-  display: block;
-  color: grey;
-  font-style: italic;
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-
-
-.bookmark_checked {
-  text-decoration: line-through;
-}
-
-#bookmark-book {
-  width: 250px;
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-
-/* ////////////// OLD CSS /////////// */
 
 #title {
   text-align: center;
@@ -87,6 +44,23 @@ header {
   align-items: center;
   padding: 2rem;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 5%;
+  opacity: 95%;
+  color: black;
+  width: 420px;
+  height: 200px;
+}
+
+
+
 
 /* anything footer related */
 

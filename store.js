@@ -1,7 +1,9 @@
 
 
 const books = [];
-let hideCheckedBooks = false;
+let hideBooks = false;
+let filter = 1;
+let error = null;
 
 const findById = function (id) {
   return this.books.find(currentBook => currentBook.id === id);
@@ -26,7 +28,9 @@ const findAndUpdate = function (id, newData) {
 
 export default {
   books,
-  hideCheckedBooks,
+  hideBooks,
+  filter,
+  error,
   findById,
   addBook,
   findAndDelete,
