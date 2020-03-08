@@ -8,14 +8,14 @@ import bookmarks from './bookmarks';
 const main = function () {
 
   api.getBooks()
-    .then(res => res.jason())
+    .then(res => res.json())
     .then((books) => {
       books.forEach((book) => store.addBook(book));
-      bookMark.render();
+      bookmarks.render();
     });
 
-  bookMarks.bindEventListeners();
-  bookMarks.render();
+  bookmarks.bindEventListeners();
+  bookmarks.render();
 
 };
 

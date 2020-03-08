@@ -3,48 +3,30 @@
 // [x] import store
 // [] register event listeners
 // [] function add handlers
-import $ from 'jquery';
-import api from './api';
-import store from './store';
+
+import api from './api.js';
+import './app.css';
+import store from './store.js';
+
 
 const init = () => {
   render();
   bindEventListeners();
 };
 
-const render = () => {
+const render = function () {
 
-};
-
-
-
-/////////////////////////////////
-///      EVENT LISTENERS      ///      
-/////////////////////////////////
-
-const bindEventListeners = () => {
-
-};
-
-
-///////////////////////////////
-///  GENERATOR FUNCTIONS   ///
-/////////////////////////////
-
-
-function generateButtons() {
-
-};
+  // filter bookmarks if book.checked===false
+  let books = [...store.books];
+  if (store.hideCheckedBooks) {
+    books = books.filter(book => !book.checked);
+  };
 
 
 
+  const bindEventListeners = function () {
+
+  }
 
 
-
-
-export default {
-  render,
-  bindEventListeners
-};
-
-$(init);
+  $(init);
