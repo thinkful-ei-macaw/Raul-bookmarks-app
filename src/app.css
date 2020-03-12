@@ -36,6 +36,8 @@ input{
   margin-top: auto;
 }
 
+
+
 header {
   display:flex;
   width: 100%;
@@ -43,6 +45,11 @@ header {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
 }
 
 form {
@@ -59,6 +66,14 @@ form {
   height: 200px;
 }
 
+button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: lighter;
+  padding: 10px 24px;
+  border-radius: 5%;
+  opacity: 95%;
+  color: black;
+}
 
 
 

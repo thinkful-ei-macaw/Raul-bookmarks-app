@@ -1,7 +1,8 @@
 
 
 const books = [];
-let hideBooks = false;
+let addingBook = false;
+// let hideBooks = false;
 let filter = 1;
 let error = null;
 
@@ -28,9 +29,9 @@ const findAndUpdate = function (id, newData) {
 
 export default {
   books,
-  hideBooks,
   filter,
   error,
+  addingBook,
   findById,
   addBook,
   findAndDelete,
