@@ -5,8 +5,8 @@ function getBooks() {
   return fetch(`${BASE_URL}/bookmarks`);
 }
 
-function createBook(name) {
-  let newBook = JSON.stringify({ name: name });
+function createBook() {
+  let newBook = JSON.stringify({ title: '', url: '', desc: '', rating: Number });
   return fetch(`${BASE_URL}/bookmarks`, {
     method: 'POST',
     headers: { 'Content-type': 'application/json' },

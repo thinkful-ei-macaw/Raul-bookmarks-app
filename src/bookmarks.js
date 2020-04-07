@@ -4,7 +4,6 @@
 // [x] register event listeners
 // [] function add handlers
 import $ from 'jQuery';
-import api from './api';
 import store from './store';
 
 
@@ -25,12 +24,24 @@ function initialView() {
 
 function addFormTemplate() {
   return `<section class="section-buttons">
-      <form action="/action_page.php" method="post">
+      <form method="post" class="js-form">
+      <label for="rating">Rating</label>
+        <select id="rating" name="site-rating">
+        <option>⭐+</option>
+        <option>⭐⭐+</option>
+        <option>⭐⭐⭐+</option>
+        <option>⭐⭐⭐⭐+</option>
+        <option>⭐⭐⭐⭐⭐</option>
+        </select>
         <input type="text" name="name" placeholder="site name" required>
         <input type="text" name="URL" placeholder="URL" required>
-        <input type="submit" value="submit">
-        <button type="button">Cancel</button>
-    </section>`;
+        <input type="textfield" name="textfield" placeholder="Describe website!" required>
+        
+         <input type="submit" value="submit">
+         <button type="button">Cancel</button>
+         </form>
+       </section> 
+    `;
 }
 
 
@@ -42,6 +53,7 @@ function render() {
   }
 }
 
+
 /// handlers ////
 function handleBookmarkAddClick() {
   $('.js-main').on('click', '.createNewBookmark', event => {
@@ -50,11 +62,23 @@ function handleBookmarkAddClick() {
   });
 }
 
+function handleCancelClick() {
+  $('.js-main').on('click', 'button', event => {
+    store.addingBook = false;
+    render();
+  });
+}
+
+
+
+
+
 ////event listeners ///////////
 
 
 function bindEventListeners() {
   handleBookmarkAddClick();
+  handleCancelClick();
 }
 
 

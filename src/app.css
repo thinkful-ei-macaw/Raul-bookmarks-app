@@ -24,9 +24,6 @@ input{
   color: black;
 }
 
-
-
-
 #title {
   text-align: center;
   width: 700px;
@@ -35,8 +32,6 @@ input{
   background: rgba(8, 62, 143, 0.5);
   margin-top: auto;
 }
-
-
 
 header {
   display:flex;
@@ -50,6 +45,10 @@ header {
 section {
   display: flex;
   justify-content: center;
+}
+
+.section-buttons {
+ padding-top: 4em;
 }
 
 form {
