@@ -3,7 +3,9 @@
 // [x] import store
 // [x] register event listeners
 // [] function add handlers
-import $ from 'jQuery';
+import $ from 'jquery';
+import api from './api';
+
 import store from './store';
 
 
@@ -24,25 +26,26 @@ function initialView() {
 
 function addFormTemplate() {
   return `<section class="section-buttons">
-      <form method="post" class="js-form">
+      <form method="#" class="js-form">
       <label for="rating">Rating</label>
         <select id="rating" name="site-rating">
-        <option>⭐+</option>
-        <option>⭐⭐+</option>
-        <option>⭐⭐⭐+</option>
-        <option>⭐⭐⭐⭐+</option>
-        <option>⭐⭐⭐⭐⭐</option>
+        <option value="1">⭐+</option>
+        <option value="2">⭐⭐+</option>
+        <option value="3">⭐⭐⭐+</option>
+        <option value="4">⭐⭐⭐⭐+</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
         </select>
         <input type="text" name="name" placeholder="site name" required>
         <input type="text" name="URL" placeholder="URL" required>
-        <input type="textfield" name="textfield" placeholder="Describe website!" required>
+        <input type="textfield" name="textfield" placeholder="Describe website!" >
         
-         <input type="submit" value="submit">
+         <button type="submit" id="add-new-bookmark">Add Book</button>
          <button type="button">Cancel</button>
          </form>
        </section> 
     `;
 }
+
 
 
 ///////// render function ///////////
@@ -56,19 +59,33 @@ function render() {
 
 /// handlers ////
 function handleBookmarkAddClick() {
-  $('.js-main').on('click', '.createNewBookmark', event => {
+  $('.js-main').on('click', '.createNewBookmark', () => {
     store.addingBook = true;
     render();
   });
 }
 
 function handleCancelClick() {
-  $('.js-main').on('click', 'button', event => {
+  $('.js-main').on('click', 'button', () => {
     store.addingBook = false;
     render();
   });
 }
 
+
+function handleCreateNewBook() {
+  $('js-form').submit(() => {
+    event.preventDefault();
+    const createdBook = $('.js-bookmark-added').val();
+    $('.js-bookmark-added').val('');
+    api.createBook(createdBook)
+      .then(res => res.json())
+      .then((newBook) => {
+        store.addBook(newBook);
+        render();
+      });
+  });
+}
 
 
 
@@ -79,6 +96,7 @@ function handleCancelClick() {
 function bindEventListeners() {
   handleBookmarkAddClick();
   handleCancelClick();
+  handleCreateNewBook();
 }
 
 

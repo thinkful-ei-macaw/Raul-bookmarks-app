@@ -2,7 +2,6 @@
 
 const books = [];
 let addingBook = false;
-// let hideBooks = false;
 let filter = 1;
 let error = null;
 
@@ -18,9 +17,6 @@ const findAndDelete = function (id) {
   this.books = this.books.filter(currentBook => currentBook.id !== id);
 };
 
-const toggleCheckedFilter = function () {
-  this.hideCheckedItems = !this.hideCheckedItems;
-};
 
 const findAndUpdate = function (id, newData) {
   let book = this.findByid(id);
@@ -35,7 +31,6 @@ export default {
   findById,
   addBook,
   findAndDelete,
-  toggleCheckedFilter,
   findAndUpdate
 };
 
